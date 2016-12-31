@@ -92,12 +92,44 @@ public class StringUtils {
 
     }
 
+    static boolean isPalindrom(String str) {
+        if (str == null || str.length() <= 1) {
+            return true;
+        }
+        int len = str.length();
+        int middle = len / 2;
+        
+        for (int i = 0; i <= middle; i++) {
+            if (str.charAt(i) != str.charAt(len - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         System.out.println("Running");
         testReverseString();
         testReverseSubString();
         testReverseWords();
+        testPalindrom();
         System.out.println("Completed");
+    }
+
+    private static void testPalindrom() {
+        assertTrue(isPalindrom(" "));
+        assertTrue(isPalindrom("  "));
+        assertTrue(isPalindrom("11"));
+        assertTrue(isPalindrom(null));
+        assertTrue(isPalindrom("dog god"));
+        assertTrue(isPalindrom("dog  god"));
+        assertTrue(isPalindrom("dog a god"));
+
+        assertFalse(isPalindrom("12"));
+        assertFalse(isPalindrom("21"));
+        assertFalse(isPalindrom("hello"));
+        assertFalse(isPalindrom(" l"));
+        assertFalse(isPalindrom("dog god "));
     }
 
     private static void testReverseWords() {
@@ -140,5 +172,17 @@ public class StringUtils {
             return;
         }
         throw new RuntimeException("Assert failed: Non equal (a == null, b != null)");
+    }
+
+    private static void assertTrue(boolean val) {
+        if (!val) {
+            throw new RuntimeException("value is true");
+        }
+    }
+
+    private static void assertFalse(boolean val) {
+        if (val) {
+            throw new RuntimeException("value is true");
+        }
     }
 }
