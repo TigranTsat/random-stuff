@@ -20,29 +20,26 @@ public class App {
 		fizzyWizzy(2)    <b>---></b> "2!" <br>
 		fizzyWizzy(3) <b>---></b> "Fizz!" <br>
 	 */
-	public static String fizzyWizzy(int n) {
-		    
-		    return n + "!";
-		    
+    public static String fizzyWizzy(int n) {
+        if (n % 15 == 0) {
+            return "FizzBuzz!";
+        }
+        if (n % 5 == 0) {
+            return "Buzz!";
+        }
+        if (n % 3 == 0) {
+            return "Fizz!";
+        }
+        return n + "!";
 
-		}
+    }
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-		
-	}
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+
+    }
 }
 
 

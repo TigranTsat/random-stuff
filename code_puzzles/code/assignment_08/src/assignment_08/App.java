@@ -18,26 +18,27 @@ public class App {
 		sumUnique(3, 2, 3)    <b>---></b> 2 <br>
 		sumUnique(3, 3, 3) <b>---></b> 0 <br>
 	 */
-	
-	public static int sumUnique(int a, int b, int c) {
-		
-		return 0;
-		
-	}
+    public static int sumUnique(int a, int b, int c) {
+        if (a == b && b == c) {
+            return 0;
+        }
+        if (a == b) {
+            return c;
+        }
+        if (a == c) {
+            return b;
+        }
+        if (b == c) {
+            return a;
+        }
+        return a + b + c;
 
-	
-	
-	
-	
-	
-	
-	
-	
+    }
 
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-		
-	}
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+
+    }
 }

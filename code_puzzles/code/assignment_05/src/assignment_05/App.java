@@ -16,25 +16,19 @@ public class App {
 		isOrdered(1, 2, 1, false)    <b>---></b> false <br>
 		isOrdered(1, 1, 2, true) <b>---></b> true <br>
 	 */
-	public static boolean isOrdered(int first, int second, int third, boolean itsOk) {
-		
-		return true;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-	}
+    public static boolean isOrdered(int first, int second, int third, boolean itsOk) {
+        if (itsOk) {
+            return (second < third);
+        } else {
+            return (first < second && second < third);
+        }
+    }
+
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+    }
 }
 
 
