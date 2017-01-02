@@ -19,25 +19,30 @@ public class App {
 		speedingFine (65, false)   <b>---></b> 100 <br>
 		speedingFine (65, true) <b>---></b> 0 <br>
 	 */
-		public static int speedingFine(int speed, boolean isHoliday) {
-			
-			return 0;
+    public static int speedingFine(int speed, boolean isHoliday) {
+        if (isHoliday) {
+            if (speed <= 65) {
+                return 0;
+            } else if (speed <= 85) {
+                return 100;
+            } else {
+                return 200;
+            }
+        } else {
+            if (speed <= 60) {
+                return 0;
+            } else if (speed <= 80) {
+                return 100;
+            } else {
+                return 200;
+            }
+        }
+    }
 
-		}
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-		public static void main(String args[]){
-			TestingUtils.runTests();
-		}
-			
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+    }
 
 }
