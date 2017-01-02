@@ -17,23 +17,17 @@ public class App {
 		birdsSinging(95, false)    <b>---></b> false <br>
 		birdsSinging(95, true) <b>---></b> true <br>
 	 */
-	public static boolean birdsSinging(int temp, boolean isSummer) {
-		
-		return true;		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-	}
+    public static boolean birdsSinging(int temp, boolean isSummer) {
+        int lowLim = 60;
+        int upperLimit = isSummer ? 100 : 90;
+        return (temp >= lowLim && temp <= upperLimit);
+    }
+
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+    }
 }
 
 
