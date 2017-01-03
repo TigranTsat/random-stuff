@@ -15,24 +15,20 @@ public class App {
 		wordsCount({"a", "bb", "b", "ccc"}, 3) <b>---></b> 1 <br>
 		wordsCount({"a", "bb", "b", "ccc"}, 4) <b>---></b> 0 <br>
 	 */
-	
-	public static int wordsCount(String[] words, int len) {
-		return 0;
-	}
+    public static int wordsCount(String[] words, int len) {
+        int count = 0;
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].length() == len) {
+                count++;
+            }
+        }
+        return count;
+    }
 
-	
-	
-	
-	
-	
-	
-	
-	
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
 
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-		
-	}
+    }
 }

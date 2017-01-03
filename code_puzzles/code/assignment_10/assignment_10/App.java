@@ -18,26 +18,25 @@ public class App {
 		partialSum(1, 2, 13)    <b>---></b> 3 <br>
 		partialSum(1, 13, 3) <b>---></b> 1 <br>
 	 */
-	
-	public static int partialSum(int a, int b, int c) {
-		
-		return 0;
-		
-	}
+    public static int partialSum(int a, int b, int c) {
+        if (a == 13) {
+            return 0;
+        }
+        if (b == 13) {
+            return a;
+        }
+        if (c == 13) {
+            return a + b;
+        }
 
-	
-	
-	
-	
-	
-	
-	
-	
+        return a + b + c;
 
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-		
-	}
+    }
+
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+
+    }
 }

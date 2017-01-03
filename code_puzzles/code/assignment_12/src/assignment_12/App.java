@@ -17,26 +17,41 @@ public class App {
 		starKill("ab**cd")    <b>---></b> "ad" <br>
 		starKill("wacy*xko") <b>---></b> "wacko" <br>
 	 */
-	
-	public static String starKill(String str) {
-		
-		return str;
-	}
+    public static String starKill(String str) {
+        int len = str.length();
+        if (len == 0) {
+            // Better to return than create StringBuilder
+            return "";
+        }
+        if (len == 1) {
+            return str.charAt(0) == '*' ? "" : str;
+        }
 
+        StringBuilder strBld = new StringBuilder(len);
+        for (int i = 0; i < len; i++) {
+            if (i >= 1 && i < len - 1) {
+                if (str.charAt(i + 1) != '*' && str.charAt(i) != '*' && str.charAt(i - 1) != '*') {
+                    strBld.append(str.charAt(i));
+                }
+            } else if (i == 0) {
+                if (str.charAt(0) != '*' && str.charAt(1) != '*') {
+                    strBld.append(str.charAt(i));
+                }
+            } else {
+                // i == len -1
+                if (str.charAt(len - 1) != '*' && str.charAt(len - 2) != '*') {
+                    strBld.append(str.charAt(i));
+                }
+            }
+        }
 
-	
-	
-	
-	
-	
-	
-	
-	
+        return strBld.toString();
+    }
 
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-		
-	}
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+
+    }
 }

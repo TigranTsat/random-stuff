@@ -19,25 +19,28 @@ public class App {
 		nearestTwentyOne(19, 22) <b>---></b> 19 <br>
 		nearestTwentyOne(32, 22) <b>---></b> 0 <br>
 	 */
-	
-	public static int nearestTwentyOne(int a, int b) {
-		
-		return 0;
-	}
+    public static int nearestTwentyOne(int a, int b) {
+        final int n21 = 21;
+        if (a > n21 && b > n21) {
+            return 0;
+        }
+        if (a > n21) {
+            return b;
+        }
+        if (b > n21) {
+            return a;
+        }
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
 
-	
-	
-	
-	
-	
-	
-	
-	
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
 
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-		
-	}
+    }
 }

@@ -19,24 +19,23 @@ public class App {
 		matchingChar({"aa", "bb", "cc"}, {"aaa", "b", "bb"}) <b>---></b> 2 <br>
 		matchingChar({"aa", "bb", "cc"}, {"", "", "ccc"}) <b>---></b> 1 <br>
 	 */
-	
-	public static int matchingChar(String[] a, String[] b) {
-		return 0;
-	}
+    public static int matchingChar(String[] a, String[] b) {
+        if (a.length != b.length) {
+            throw new IllegalArgumentException("Wrong len");
+        }
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (a[i].length() > 0 && b[i].length() > 0 && a[i].charAt(0) == b[i].charAt(0)) {
+                count++;
+            }
+        }
+        return count;
+    }
 
-	
-	
-	
-	
-	
-	
-	
-	
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
 
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-		
-	}
+    }
 }

@@ -16,25 +16,23 @@ public class App {
 		repeatChar("AAbb")    <b>---></b> "AAAAbbbb" <br>
 		repeatChar("Hi-There") <b>---></b> "HHii--TThheerree" <br>
 	 */
-	
-	public static String repeatChar(String str) {
-		return str;
-		
-	}
 
-	
-	
-	
-	
-	
-	
-	
-	
+    public static String repeatChar(String str) {
+        if (str == null) {
+            return null;
+        }
+        StringBuilder strBld = new StringBuilder(str.length() * 2);
+        for (int i = 0; i < str.length(); i++) {
+            strBld.append(str.charAt(i)).append(str.charAt(i));
+        }
+        return strBld.toString();
 
-	
-	//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-		
-	}
+    }
+
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+
+    }
 }
