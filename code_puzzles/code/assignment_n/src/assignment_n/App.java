@@ -15,20 +15,13 @@ public class App {
 		sumMinus3(2, 1)  <b>---></b> 0 <br>
 		sumMinus3(0, 2) <b>---></b> -1 <br>
 	 */
-		public static int sumMinus3(int a, int b) {
-			
-			return a+b-3;
-		}
-		
-		
-		
-		
-		
-		
+    public static int sumMinus3(int a, int b) {
+        return a + b - 3;
+    }
 
-//----------------------STARTING POINT OF PROGRAM. IGNORE BELOW --------------------//
-	public static void main(String args[]){
-		TestingUtils.runTests();
-	}
-		
+    // ----------------------STARTING POINT OF PROGRAM. IGNORE BELOW
+    // --------------------//
+    public static void main(String args[]) {
+        TestingUtils.runTests();
+    }
 }
