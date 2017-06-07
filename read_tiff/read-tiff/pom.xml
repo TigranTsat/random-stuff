@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>tigrantsat.me</groupId>
+  <artifactId>read-tiff</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <description>Example how to read tiff image in java</description>
+
+  <name>read-tiff</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+	    <groupId>com.github.jai-imageio</groupId>
+	    <artifactId>jai-imageio-core</artifactId>
+	    <version>1.3.1</version>
+	</dependency>
+  </dependencies>
+</project>
